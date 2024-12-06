@@ -3,5 +3,5 @@ import { test, expect } from "@playwright/test";
 
 test("should load homepage", async ({ page }) => {
   await page.goto("http://localhost:3000"); // ローカル Next.js アプリ
-  await expect(page).toHaveTitle("Your App Title"); // タイトルが一致することを確認
+  await expect(page).toHaveTitle("Create Next App"); // タイトルが一致することを確認
 });
