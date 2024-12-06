@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Playwright browsers
+        run: npx playwright install  # Playwright のブラウザをインストール
+
       - name: Run Jest tests
         run: npm test  # Jest のテスト実行
 
