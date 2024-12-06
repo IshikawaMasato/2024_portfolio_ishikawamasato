@@ -23,6 +23,10 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install  # Playwright のブラウザをインストール
 
+      - name: Start Next.js application
+        run: |
+          nohup npm run dev & sleep 10
+
       - name: Run Jest tests
         run: npm test  # Jest のテスト実行
 
