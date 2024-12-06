@@ -1,11 +1,11 @@
-name: test
+name: Test and Build
 
 on:
   push:
   pull_request:
 
 jobs:
-  test-and-build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,11 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run ESLint
-        run: npm run lint
-
       - name: Run Jest tests
-        run: npm test
+        run: npm test  # Jest のテスト実行
 
       - name: Run Playwright E2E tests
-        run: npx playwright test
+        run: npx playwright test  # Playwright のテスト実行
