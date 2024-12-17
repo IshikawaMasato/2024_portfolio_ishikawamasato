@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-size-large: 2em;
+  --font-size-medium: 1.5em;
+  --font-size-small: 1em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+}
