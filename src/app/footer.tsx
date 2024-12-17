@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"; // next/link をインポート
 
 const Footer: React.FC = () => {
   return (
@@ -7,33 +8,33 @@ const Footer: React.FC = () => {
         <nav>
           <ul className="list-none p-0 flex justify-center mt-4">
             <li className="mx-4">
-              <a href="/" className="text-black no-underline">
+              <Link href="/" className="text-black no-underline">
                 トップ
-              </a>
+              </Link>
             </li>
             <li className="mx-4">
-              <a href="/portfolio" className="text-black no-underline">
+              <Link href="/portfolio" className="text-black no-underline">
                 ポートフォリオ
-              </a>
+              </Link>
               <p>
-                <a href="#">自己紹介</a>
+                <Link href="#">自己紹介</Link>
               </p>
               <p>
-                <a href="#">スキル紹介</a>
+                <Link href="#">スキル紹介</Link>
               </p>
               <p>
-                <a href="#">制作物紹介</a>
+                <Link href="#">制作物紹介</Link>
               </p>
             </li>
             <li className="mx-4">
-              <a href="/blog" className="text-black no-underline">
+              <Link href="/blog" className="text-black no-underline">
                 ブログ
-              </a>
+              </Link>
             </li>
             <li className="mx-4">
-              <a href="/contact" className="text-black no-underline">
+              <Link href="/contact" className="text-black no-underline">
                 連絡
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
