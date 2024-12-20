@@ -3,7 +3,7 @@ import Link from "next/link"; // next/link をインポート
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-white text-black">
+    <header className="bg-white text-black fixed top-0 left-0 w-full z-50">
       <nav aria-label="Main Navigation">
         <ul className="flex justify-end space-x-8 p-4 pr-12 text-lg">
           <li>
