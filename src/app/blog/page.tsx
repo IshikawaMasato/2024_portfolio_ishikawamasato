@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 
 interface GitHubProfile {
@@ -45,7 +44,7 @@ export default function BlogPage() {
               APIエンドポイントを作成でき、バックエンドの機能を簡単に組み込める。
             </p>
             <p className="text-black">
-              varcelと互換性があり GitHubと連携するだけでデプロイが可能
+              Vercelと互換性があり、GitHubと連携するだけでデプロイが可能
             </p>
           </div>
         </div>
