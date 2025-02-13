@@ -2,16 +2,6 @@
 
 import Image from "next/image";
 
-interface GitHubProfile {
-  avatar_url: string;
-  name: string;
-  bio: string;
-  html_url: string;
-  public_repos: number;
-  followers: number;
-  following: number;
-}
-
 export default function BlogPage() {
   return (
     <div className="min-h-screen flex flex-col">

@@ -21,12 +21,16 @@ export default function PortfolioPage() {
   useEffect(() => {
     const fetchGitHubProfile = async () => {
       try {
-        const response = await fetch("../api/github");
+        const response = await fetch("/api/github");
         if (!response.ok) throw new Error("Failed to fetch profile");
         const data = await response.json();
         setProfile(data);
-      } catch (err) {
-        setError("プロフィールの取得に失敗しました");
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("プロフィールの取得に失敗しました");
+        }
       } finally {
         setLoading(false);
       }
@@ -98,8 +102,7 @@ export default function PortfolioPage() {
               一週間という短い時間で簡単な設計からデプロイまで出来たのは良い経験になりました。
             </p>
             <p className="text-gray-600">
-              使用技術(バックエンド): Laravel supabase(postgresql) docker
-              render
+              使用技術(バックエンド): Laravel supabase(postgresql) docker render
             </p>
             <p className="text-gray-600">
               使用技術(フロントエンド): NEXT.js tailwindcss vercel
@@ -129,9 +132,11 @@ export default function PortfolioPage() {
           ) : (
             profile && (
               <div className="flex flex-col md:flex-row items-center gap-8">
-                <img
+                <Image
                   src={profile.avatar_url}
                   alt="GitHub Profile"
+                  width={192}
+                  height={192}
                   className="w-48 h-48 rounded-full border-4 border-blue-100 shadow-md"
                 />
 
